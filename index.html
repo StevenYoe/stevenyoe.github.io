@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="sources/img/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/exed.css" />
+    <style>
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="sources/video/Comet Tiamat Falling.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>    
+      <audio id="backgroundAudio" loop>
+        <source src="sources/Song/Beneath the Mask instrumental version.mp3" type="audio/mpeg">
+      </audio>
+    <div class="circle-cursor" id="circleCursor"></div>
+    <a href="#" class="logo-link">
+        <div class="social-circle"></div>
+        <div class="social-icon">
+            <i class="fa fa-home"></i>
+        </div>
+    </a>
+    <a class="sound-link" id="soundToggle">Sound&nbsp <span class="sound-highlight" id="soundHighlight">Off</span>
+      </a>
+      
+    <nav class="nav-link">
+        <a href="#about" class="nav-item" data-hover-text="About"><span class="nav-text">About</span></a>
+        <a href="#experience" class="nav-item" data-hover-text="My Experience"><span class="nav-text">My Experience</span></a>
+        <a href="#education" class="nav-item" data-hover-text="My Education"><span class="nav-text">My Education</span></a>
+        <a href="#works" class="nav-item" data-hover-text="My Recent Works"><span class="nav-text">My Recent Works</span></a>
+        <a href="#certification" class="nav-item" data-hover-text="My Certification"><span class="nav-text">My Certification</span></a>
+      </nav>
+
+    <div class="social-links">
+        <a href="https://wa.me/+6281319281016?text=Hi%20Steven%2C%20I%20saw%20your%20portfolio..." target="_blank" class="social-link">
+            <div class="social-circle"></div>
+            <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=stevenyoe80@gmail.com&su=Let%27s%20Collaborate&body=Hi%20Steven%2C%20I%20saw%20your%20portfolio..." target="_blank" class="social-link">
+            <div class="social-circle"></div>
+            <div class="social-icon"><i class="fa fa-envelope"></i></div>
+        </a>
+        <a href="https://mnp.ac.id/" target="_blank" class="social-link">
+            <div class="social-circle"></div>
+            <div class="social-icon"><i class="fa fa-university"></i></div>
+        </a>
+    </div>
+
+    <!-- Rest of existing content -->
+    <div class="scroll-container">
+        <div class="main-container">
+            <section class="about-section" id="about">
+                <div class="text-container" id="textContainer">
+                    <div class="text-layer" style="text-align: left;">
+                        <h1>I Am Steven</h1>
+                        <h1 class="highlight">IT<span class="normal"> | </span>Logistics
+                            <span class="normal"> | </span>
+                            Business
+                        </h1>
+                        <p class="about-description" style="text-align: justify;">A dedicated and ambitious student at Multimedia Nusantara Polytechnic 
+                            with a strong interest in Technology, Logistics, and Financial Management. 
+                            Currently maintaining a 3.91 GPA while being an active member of the 
+                            E-Commerce Logistics Student Association and participating in various 
+                            campus initiatives including Inauguration 2024. Skilled in multiple 
+                            programming languages, data analysis, ERP systems, and multimedia operations. 
+                            Actively expanding expertise through programs like Samsung Innovation Campus 
+                            and continuously developing professional capabilities through various roles 
+                            and projects.</p>
+                        <div class="download-cv">
+                            <a href="sources/CV_Steven.pdf" target="_blank" class="cv-button">
+                                <span>Download CV</span>
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-right">
+                    <div class="profile-image">
+                        <img src="sources/img/profile-detail.jpg" alt="Profile Picture" />
+                    </div>
+                </div>
+            </section>
+        
+            <section class="experience-section section-exed" id="experience">
+                <div class="section-header">
+					<h2 class="section-title">My Experience</h2>
+				</div>
+                <div class="timeline-container">
+					<!-- Experience items will be populated by JavaScript -->
+				</div>
+            </section>
+            <section class="education-section section-exed" id="education">
+                <div class="section-header">
+					<h2 class="section-title">My Education</h2>
+				</div>
+                <div class="timeline-container">
+					<!-- Education items will be populated by JavaScript -->
+				</div>
+            </section>
+            <section class="works-section" id="works"></section>
+            <section class="certification-section" id="certification"></section>
+            <img id="scrollToTopBtn" src="sources/img/Scroll-to-top.png" alt="Take Your Time">
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/exed.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100%; 
+        height: 100%;
+        opacity: 30%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    body {
+        background-color: #1a1a1a;
+        font-family: Arial, sans-serif;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px 100px;
+    }
+
+    section {
+        width: 100%; /* Pastikan section memanfaatkan lebar penuh */
+        padding: 75px 35px; /* Tambahkan padding dalam */
+        margin-bottom: 20px; /* Tambahkan jarak antar section */
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Gaya Navbar */
+    .nav-link {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 1000;
+    }
+
+    .nav-text {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item {
+        position: relative;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #666;
+        text-decoration: none;
+        overflow: hidden;
+        transition: color 0.3s ease;
+    }
+
+    .nav-item::before {
+        content: attr(data-hover-text); /* Text to replace */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        color: #EB1616;
+        transform: translateY(0);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-item.active {
+        color: #EB1616; /* Change text color to red */
+        font-weight: bold; /* Optional: make it bold */
+    }
+
+    .nav-item.active::before {
+        transform: translateY(0); /* Ensure the before pseudo-element is visible */
+        opacity: 1; /* Make sure it is fully opaque */
+    }
+
+    .nav-item:hover .nav-text {
+        transform: translateY(-100%);
+    }
+
+    .nav-item:hover::before {
+        transform: translateY(-100%);
+    }
+
+    .social-links {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.5rem;
+        z-index: 1000;
+    }
+
+    .social-links a, .logo-link, .sound-link {
+        color: #666;
+        text-decoration: none;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .logo-link {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 1.5rem;
+        z-index: 1000;
+    }
+
+    .sound-link {
+        width: 50px;
+        height: 120px;
+        position: fixed;
+        font-weight: bold;
+        bottom: 20px;
+        left: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        writing-mode: vertical-lr; /* Mengatur teks menjadi vertikal */
+        transform: rotate(180deg); /* Memutar teks agar mengalir dari bawah ke atas */
+        z-index: 1000;
+    }
+    
+    .sound-link:hover {
+        color: #EB1616;
+    }
+
+    /* Modified social links hover effect */
+    .social-circle {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #EB1616;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s;
+        pointer-events: none;
+    }
+
+    .social-icon {
+        position: relative;
+        z-index: 1;
+        transition: transform 0.2s;
+    }
+
+    .social-links a:hover .social-circle, 
+    .logo-link:hover .social-circle {
+        opacity: 1;
+    }
+
+    .social-links a:hover .social-icon, 
+    .logo-link:hover .social-icon {
+        color: #000;
+        transform: translate(var(--x), var(--y));
+    }
+
+    .about-section, .works-section, 
+    .experience-section, .education-section, 
+    .certification-section {
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .about-section {
+        display: flex;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .about-description {
+        font-size: 1.25rem;
+        margin: 2rem 0;
+        max-width: 600px;
+        color: #a1a1aa;
+        line-height: 1.8;
+    }
+
+    .works-section, 
+    .experience-section, .education-section, 
+    .certification-section {
+        background-color: #000;
+        background: transparent;
+    }
+
+    .experience-section {
+        height: 100vh;
+    }
+
+    /* Rest of existing styles */
+    .text-container {
+        display: flex;
+        position: relative;
+        width: 600px;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-layer {
+        margin-left: 20px;
+        position: absolute;
+        font-size: 80px;
+        line-height: 0.5;
+        text-align: center;
+        color: #BFB4A3;
+    }
+
+    .highlight, .sound-highlight {
+        color: #EB1616;
+    }
+
+    .black {
+        color: #000;
+    }
+
+    .normal {
+        color: #BFB4A3;
+    }
+
+    .cv-button {
+        background-color: #EB1616;
+        color: white;
+        width: 600px;
+        height: 60px;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        display: inline-flex;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(228, 58, 25, 0.2);
+    }
+
+    .cv-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px #eb8d8d;
+    }
+
+    .text-layer h1 {
+        font-size: 40px;
+        font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .text-layer p {
+        font-size: 20px;
+        font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: left;
+        color: #BFB4A3;
+    }
+
+    .photo-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .profile-image {
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 20px 40px rgba(195, 132, 247, 0.3),
+            0 0 30px rgba(228, 58, 25, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .profile-image:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 35px rgba(228, 58, 25, 0.3);
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .scroll-container {
+        width: 100%;
+    }
+
+    /* Definisi animasi dengan jeda */
+    @keyframes rotateY360WithPause {
+        0% {
+            transform: rotateY(0deg);
+        }
+        80% {
+            transform: rotateY(360deg); /* Rotasi selesai pada 80% */
+        }
+        100% {
+            transform: rotateY(360deg); /* Tetap di posisi akhir selama sisa waktu */
+        }
+    }
+
+    /* Gaya untuk tombol gambar */
+    #scrollToTopBtn {
+        width: 110px; /* Sesuaikan ukuran */
+        height: auto;
+        position: fixed;
+        bottom: 20px; /* Posisi dari bawah layar */
+        right: 20px; /* Posisi dari kanan layar */
+        cursor: pointer;
+        z-index: 1000; /* Selalu di atas */
+        animation: rotateY360WithPause 2s linear infinite; /* Durasi 5 detik dengan pengulangan */
+        animation-delay: 1s; /* Tambahkan jeda awal jika perlu */
+        transition: opacity 0.3s; /* Efek transisi untuk visibilitas */
+        opacity: 0; /* Tersembunyi secara default */
+    }
+
+    /* Tampilkan tombol saat pengguna scrolling ke bawah */
+    #scrollToTopBtn.show {
+        opacity: 1; /* Tampilkan tombol */
+    }

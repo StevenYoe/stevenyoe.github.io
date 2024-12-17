@@ -1,0 +1,152 @@
+/* Common styles for both sections */
+.section-exed {
+	padding: 4rem 0;
+}
+
+.section-header {
+	margin: 0 auto;
+	padding: 0 2rem;
+	margin-bottom: 3rem;
+	align-items: center;
+	gap: 1rem;
+}
+
+.section-title {
+	color: red;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 2.5rem;
+	-webkit-background-clip: text;
+	text-align: center;
+}
+
+.timeline-container {
+	width: 1100px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.timeline-item {
+	background: rgba(242, 244, 247, 0.08);
+	border-radius: 15px;
+	padding: 2rem;
+	margin-bottom: 2rem;box-shadow: 0 20px 40px rgba(195, 132, 247, 0.3),
+	0 0 30px rgba(228, 58, 25, 0.2);
+	overflow: hidden;
+}
+
+.timeline-item:hover {
+	transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 35px rgba(228, 58, 25, 0.3);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-date {
+	color: #EB1616;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	font-weight: 900;
+}
+
+.timeline-title {
+	color: #EB1616;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 1000;
+	margin-bottom: 0.5rem;
+}
+
+.timeline-subtitle {
+	color: #BFB4A3;
+	font-size: 1.1rem;
+	font-weight: 900;
+}
+
+/* Previous styles remain the same until timeline-subtitle */
+
+.timeline-description {
+	margin-top: 1.5rem;
+	color: #BFB4A3;
+	font-weight: 700;
+}
+
+.description-list {
+	list-style: none;
+	padding-left: 1.5rem;
+}
+
+.description-list li {
+	position: relative;
+	margin-bottom: 0.75rem;
+	line-height: 1.6;
+}
+
+.description-list li::before {
+	content: '';
+	position: absolute;
+	left: -1.5rem;
+	top: 0.5rem;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--secondary);
+}
+
+.timeline-item:hover .description-list li::before {
+	transform: scale(1.2);
+	transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.section-exed {
+		padding: 4rem 0;
+	}
+
+	.section-header {
+		padding: 0 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.section-header i {
+		font-size: 2rem;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.timeline-container {
+		padding: 0 1.5rem;
+	}
+
+	.timeline-item {
+		padding: 1.5rem;
+	}
+
+	.timeline-title {
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.description-list {
+		padding-left: 1.25rem;
+	}
+
+	.description-list li {
+		font-size: 0.95rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.description-list li::before {
+		left: -1.25rem;
+		width: 5px;
+		height: 5px;
+	}
+}
