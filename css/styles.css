@@ -341,3 +341,75 @@
     #scrollToTopBtn.show {
         opacity: 1; /* Tampilkan tombol */
     }
+
+    @media (max-width: 1024px) {
+        body {
+            margin: 0px 50px;
+        }
+    
+        section {
+            padding: 50px 20px;
+        }
+    
+        .about-section {
+            flex-direction: column;
+            gap: 40px;
+            height: auto;
+            padding-top: 100px;
+        }
+    
+        .text-container {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    
+        .text-layer {
+            position: relative;
+            margin-left: 0;
+            text-align: center;
+        }
+    
+        .text-layer h1 {
+            font-size: 32px;
+        }
+    
+        .about-description {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+    
+        .cv-button {
+            width: 100%;
+            max-width: 400px;
+            font-size: 1.2rem;
+        }
+    
+        .profile-image {
+            width: 300px;
+            height: 300px;
+        }
+    
+        .timeline-container {
+            width: 100%;
+            padding: 0 1rem;
+        }
+    
+        .nav-link {
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    
+        .social-links {
+            display: none;
+        }
+    
+        .logo-link {
+            display: none;
+        }
+    
+        .sound-link {
+            display: none;
+        }
+    }
