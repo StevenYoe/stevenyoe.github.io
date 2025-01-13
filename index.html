@@ -13,6 +13,14 @@
     </style>
 </head>
 <body>
+    <div class="hamburger-menu">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    </div>
+    <div class="side-menu">
+        <!-- These elements will be moved here by JavaScript when in mobile view -->
+    </div>
     <video autoplay muted loop id="myVideo">
         <source src="sources/video/Comet Tiamat Falling.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
@@ -34,6 +42,7 @@
         <a href="#about" class="nav-item" data-hover-text="About"><span class="nav-text">About</span></a>
         <a href="#experience" class="nav-item" data-hover-text="My Experience"><span class="nav-text">My Experience</span></a>
         <a href="#education" class="nav-item" data-hover-text="My Education"><span class="nav-text">My Education</span></a>
+        <a href="#skill" class="nav-item" data-hover-text="My Skills"><span class="nav-text">My Skills</span></a>
         <a href="#works" class="nav-item" data-hover-text="My Recent Works"><span class="nav-text">My Recent Works</span></a>
         <a href="#certification" class="nav-item" data-hover-text="My Certification"><span class="nav-text">My Certification</span></a>
       </nav>
@@ -46,6 +55,10 @@
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=stevenyoe80@gmail.com&su=Let%27s%20Collaborate&body=Hi%20Steven%2C%20I%20saw%20your%20portfolio..." target="_blank" class="social-link">
             <div class="social-circle"></div>
             <div class="social-icon"><i class="fa fa-envelope"></i></div>
+        </a>
+        <a href="https://www.instagram.com/stevenyoe88/" target="_blank" class="social-link">
+            <div class="social-circle"></div>
+            <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
         </a>
         <a href="https://mnp.ac.id/" target="_blank" class="social-link">
             <div class="social-circle"></div>
@@ -83,9 +96,11 @@
                 </div>
                 <div class="photo-right">
                     <div class="profile-image">
-                        <img src="sources/img/profile-detail.jpg" alt="Profile Picture" />
+                        <img src="sources/img/profile-detail.jpg" alt="Default Profile Picture" class="default" />
+                        <img src="sources/img/profile-detail-hover.jpg" alt="Hovered Profile Picture" class="hover" />
                     </div>
                 </div>
+                
             </section>
         
             <section class="experience-section section-exed" id="experience">

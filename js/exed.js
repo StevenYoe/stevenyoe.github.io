@@ -11,6 +11,14 @@ $(document).ready(function() {
                 "Introducing Multimedia Nusantara Polytechnic to visiting high school students in order to attract their interest",
                 "Conduct recruitment by inviting and communicating with high school students",
             ]
+        },
+        {
+            year: "June - July 2024",
+            title: "Intership",
+            company: "PT Samanasoft Inovasi Persada – Tangerang Regency, Indonesia",
+            description: [
+                "Developing features and information to existing website and programs, contributing to make a tutorial video.",
+            ]
         },        
     ];
 

@@ -109,3 +109,116 @@
 
     // Tambahkan event listener untuk interaksi pengguna
     document.addEventListener('click', playAudio, { once: true });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const body = document.querySelector('body');
+        const hamburger = document.querySelector('.hamburger-menu');
+        const sideMenu = document.querySelector('.side-menu');
+        const socialLinks = document.querySelector('.social-links');
+        const logoLink = document.querySelector('.logo-link');
+        const soundLink = document.querySelector('.sound-link');
+    
+        // Function to initialize hover effects for social links
+        function initializeSocialLinksHover(container) {
+            const newSocialLinks = container.querySelectorAll('.social-link, .logo-link');
+            
+            newSocialLinks.forEach(link => {
+                const circle = link.querySelector('.social-circle');
+                const icon = link.querySelector('.social-icon');
+                
+                link.addEventListener('mousemove', (e) => {
+                    const rect = link.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    circle.style.left = x + 'px';
+                    circle.style.top = y + 'px';
+    
+                    const centerX = 15;
+                    const centerY = 15;
+                    const offsetX = x - centerX;
+                    const offsetY = y - centerY;
+                    
+                    icon.style.setProperty('--x', `${offsetX}px`);
+                    icon.style.setProperty('--y', `${offsetY}px`);
+                });
+    
+                link.addEventListener('mouseleave', () => {
+                    icon.style.setProperty('--x', '0px');
+                    icon.style.setProperty('--y', '0px');
+                });
+            });
+        }
+    
+        // Create overlay if it doesn't exist
+        let overlay = document.querySelector('.menu-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.classList.add('menu-overlay');
+            body.appendChild(overlay);
+        }
+    
+        // Toggle menu function
+        function toggleMenu() {
+            body.classList.toggle('menu-active');
+            hamburger.classList.toggle('menu-open');
+            overlay.classList.toggle('active');
+        }
+    
+        // Function to close menu
+        function closeMenu() {
+            body.classList.remove('menu-active');
+            hamburger.classList.remove('menu-open');
+            overlay.classList.remove('active');
+        }
+    
+        // Handle menu elements placement
+        function handleMenuElements() {
+            if (window.innerWidth <= 1024) {
+                if (!sideMenu.querySelector('.social-links')) {
+                    // Clone the elements
+                    const socialLinksClone = socialLinks.cloneNode(true);
+                    const logoLinkClone = logoLink.cloneNode(true);
+                    const soundLinkClone = soundLink.cloneNode(true);
+                    
+                    // Clear existing content
+                    sideMenu.innerHTML = '';
+                    
+                    // Add cloned elements
+                    sideMenu.appendChild(socialLinksClone);
+                    sideMenu.appendChild(logoLinkClone);
+                    sideMenu.appendChild(soundLinkClone);
+                    
+                    // Initialize hover effects
+                    initializeSocialLinksHover(sideMenu);
+                }
+            } else {
+                closeMenu();
+                sideMenu.innerHTML = '';
+            }
+        }
+    
+        // Event Listeners
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+    
+        overlay.addEventListener('click', closeMenu);
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (body.classList.contains('menu-active') && 
+                !hamburger.contains(e.target) && 
+                !sideMenu.contains(e.target)) {
+                closeMenu();
+            }
+        });
+    
+        // Handle resize events
+        window.addEventListener('resize', handleMenuElements);
+    
+        // Initial setup
+        handleMenuElements();
+    });
