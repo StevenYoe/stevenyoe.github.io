@@ -39,8 +39,8 @@
 .timeline-item {
     background: rgba(242, 244, 247, 0.08);
     border-radius: 15px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
     box-shadow: 0 20px 40px rgba(195, 132, 247, 0.3),
     0 0 30px rgba(228, 58, 25, 0.2);
     overflow: hidden;

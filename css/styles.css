@@ -29,7 +29,7 @@
 
     section {
         width: 100%; /* Pastikan section memanfaatkan lebar penuh */
-        padding: 75px 35px; /* Tambahkan padding dalam */
+        padding: 80px 40px; /* Tambahkan padding dalam */
         margin-bottom: 20px; /* Tambahkan jarak antar section */
         position: relative;
         z-index: 1;
