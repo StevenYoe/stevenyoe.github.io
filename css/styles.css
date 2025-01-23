@@ -94,7 +94,7 @@
     .social-links {
         position: fixed;
         left: 20px;
-        top: 50%;
+        top: 45%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
@@ -172,7 +172,7 @@
     }
 
     .about-section, .works-section, 
-    .experience-section, .education-section, 
+    .skills-section, .experience-section, .education-section, 
     .certification-section {
         gap: 20px;
         align-items: center;
@@ -183,7 +183,6 @@
     .about-section {
         display: flex;
         position: relative;
-        height: 100vh;
         overflow: hidden;
     }
 
@@ -193,17 +192,6 @@
         max-width: 600px;
         color: #a1a1aa;
         line-height: 1.8;
-    }
-
-    .works-section, 
-    .experience-section, .education-section, 
-    .certification-section {
-        background-color: #000;
-        background: transparent;
-    }
-
-    .experience-section {
-        height: 100vh;
     }
 
     /* Rest of existing styles */
