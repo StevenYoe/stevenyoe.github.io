@@ -14,7 +14,7 @@ $(document).ready(function() {
         },
         {
             year: "June - July 2024",
-            title: "Intership",
+            title: "Internship",
             company: "PT Samanasoft Inovasi Persada – Tangerang Regency, Indonesia",
             description: [
                 "Developing features and information to existing website and programs, contributing to make a tutorial video.",
