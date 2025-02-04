@@ -80,7 +80,7 @@ body {
 .carousel-item__title {
 	margin: 15px 0 0 0;
 	font-family: 'Space Grotesk', sans-serif;
-	font-size: 44px;
+	font-size: 37px;
 	line-height: 45px;
 	letter-spacing: 3px;
 	font-weight: 700;
@@ -149,16 +149,8 @@ body {
 	background: #EB1616;
 }
 
-/* .fa-angle-right:before {
-    color: white;
-}
-
-.fa-angle-left:before {
-    color: white;
-} */
-
 .carousel__arrow i {
-	color: rgba(242, 244, 247);
+	color: #BFB4A3;
 }
 
 .carousel__arrow:nth-child(1):after {
@@ -208,7 +200,7 @@ body {
 	}
 
 	.carousel-item__title {
-		font-size: 32px;
+		font-size: 25px;
 	}
 }
 
