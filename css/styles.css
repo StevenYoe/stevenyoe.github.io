@@ -489,41 +489,10 @@
             width: 100%;
             padding: 0 1rem;
         }
-    
-        .nav-link {
-            padding: 10px;
-            border-radius: 10px;
-        }
-    
-        .hamburger-menu {
-            display: flex;
-        }
-    
-        .social-links,
+        
+        .nav-link, .social-links,
         .logo-link,
         .sound-link {
             display: none;
-        }
-    
-        .side-menu .social-links,
-        .side-menu .logo-link,
-        .side-menu .sound-link {
-            display: flex;
-            position: static;
-            margin: 0 auto;
-        }
-    
-        .side-menu .social-links {
-            flex-direction: column;
-            align-items: center;
-            padding: 20px 0;
-        }
-    
-        .side-menu .sound-link {
-            writing-mode: horizontal-tb;
-            transform: none;
-            height: auto;
-            width: auto;
-            text-align: center;
         }
     }
