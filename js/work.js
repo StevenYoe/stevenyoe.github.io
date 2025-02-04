@@ -29,7 +29,7 @@ $(document).ready(function () {
 			id: 4,
 			title: 'Rese Corner Website',
 			category: 'Website',
-			image: 'sources/img/work/5.png',
+			image: 'sources/img/work/4.png',
 			description:
 				'A PHP-based corporate website for a various snack company, delivering a professional online presence with dynamic content management capabilities.',
 		},
@@ -37,7 +37,7 @@ $(document).ready(function () {
 			id: 5,
 			title: 'Rese Corner Apps',
 			category: 'Mobile Application',
-			image: 'sources/img/work/6.png',
+			image: 'sources/img/work/5.png',
 			description:
 				'A Flutter-based Android application for a rese corner business, offering a user-friendly platform for browsing and ordering various snacks.',
 		},
@@ -45,7 +45,7 @@ $(document).ready(function () {
 			id: 6,
 			title: 'Saga Sips',
 			category: 'Innovation',
-			image: 'sources/img/work/7.png',
+			image: 'sources/img/work/6.png',
 			description:
 				'A student entrepreneurship venture specializing in coffee and Sonkit orange juice, implementing comprehensive business strategies from marketing to financial management.',
 		},
@@ -53,7 +53,7 @@ $(document).ready(function () {
 			id: 7,
 			title: 'Manufacturing Warehouse',
 			category: 'Warehouse',
-			image: 'sources/img/work/4.png',
+			image: 'sources/img/work/7.png',
 			description:
 				'A detailed warehouse optimization project focusing on layout design, location strategy, and efficient product flow management for a manufacturing goods facility.',
 		},
