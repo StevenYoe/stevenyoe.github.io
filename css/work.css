@@ -46,11 +46,33 @@
     transform: translateY(0);
 }
 
+.portofolio-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .portofolio-title {
     color: #BFB4A3;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
     margin-bottom: 0.5rem;
+}
+
+.portofolio-title-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.portofolio-title-link i {
+    color: #000000;
+}
+
+.portofolio-title-link:hover i {
+    transform: translateX(3px);
+    color: #000000;
 }
 
 .portofolio-category {

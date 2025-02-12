@@ -1,23 +1,13 @@
 $(document).ready(function() {
-    // Experience data
-    const experienceData = [
-        {
-            year: "January - February 2023 | July - August 2023",
-            title: "Campus Visit Committee",
-            company: "Polytechnic Multimedia Nusantara, Indonesia",
-            description: [
-                "Educating high school students by guiding campus tours, teaching workshops and promoting Multimedia Nusantara Polytechnic",
-                "Welcome and guide high school students visiting Multimedia Nusantara Polytechnic",
-                "Introducing Multimedia Nusantara Polytechnic to visiting high school students in order to attract their interest",
-                "Conduct recruitment by inviting and communicating with high school students",
-            ]
-        },
+    // Work Experience data
+    const workexperienceData = [
         {
             year: "June - July 2024",
-            title: "Internship",
+            title: "Web Development Internship",
             company: "PT Samanasoft Inovasi Persada – Tangerang Regency, Indonesia",
             description: [
-                "Developing features and information to existing website and programs, contributing to make a tutorial video.",
+                "Developing features and information to existing website and programs", 
+                "Contributing to make a tutorial video.",
             ]
         },        
     ];
@@ -36,10 +26,21 @@ $(document).ready(function() {
         {
             year: "2022 - Present",
             title: "E-Commerce",
-            institution: "Polytechnic Multimedia Nusantara",
+            institution: "Multimedia Nusantara Polytechnic",
             description: [
                 "Entered the polytechnic with a scholarship",
+                "E-Commerce Logistics Major",
                 "Current GPA: 3.91 out of 4.0",
+            ]
+        }
+    ];
+
+    // Organization Experience data
+    const organizationexperienceData = [
+        {
+            year: " ",
+            title: "Organization at Multimedia Nusantara Polytechnic",
+            description: [
                 "Treasurer/Finance of the E-Commerce Logistics Student Association (January 2023 - June 2024)",
                 "Event Division in Anagata 2023 (new student orientation event)",
                 "Head of Fresh Money Division in Ashandya 2023 (Cultural events)",
@@ -49,7 +50,7 @@ $(document).ready(function() {
                 "Equipment & Logistics Division in Outbound WMK FB UMN 2024 (Digital entrepreneurship event)",
                 "Participated in online and offline courses, seminars, and training sessions, including: DQ Lab, Disaster Preparedness and Post-Disaster Resilience, Samsung Innovation Campus Batch 5 (2023/2024)",
             ]
-        }
+        },        
     ];
 
     // Function to create timeline items
@@ -58,13 +59,22 @@ $(document).ready(function() {
             .map(item => `<li>${item}</li>`)
             .join('');
 
+            let subtitle = '';
+            if (type === 'workexperience') {
+                subtitle = data.company;
+            } else if (type === 'education') {
+                subtitle = data.institution;
+            } else if (type === 'organizationexperience') {
+                subtitle = data.company;
+            }
+            
         return `
             <div class="timeline-item">
                 <div class="timeline-header">    
                     <h3 class="timeline-title">${data.title}</h3>
                     <div class="timeline-date">${data.year}</div>
                 </div>
-                <p class="timeline-subtitle">${type === 'experience' ? data.company : data.institution}</p>
+                ${subtitle ? `<p class="timeline-subtitle">${subtitle}</p>` : ''}
                 <div class="timeline-description">
                     <ul class="description-list">
                         ${descriptionList}
@@ -75,10 +85,10 @@ $(document).ready(function() {
     }
 
     // Populate experience section
-    function initExperience() {
-        const experienceContainer = $('#experience .timeline-container');
-        experienceData.forEach(item => {
-            experienceContainer.append(createTimelineItem(item, 'experience'));
+    function initworkExperience() {
+        const experienceContainer = $('#workexperience .timeline-container');
+        workexperienceData.forEach(item => {
+            experienceContainer.append(createTimelineItem(item, 'workexperience'));
         });
     }
 
@@ -90,8 +100,17 @@ $(document).ready(function() {
         });
     }
 
+    // Populate experience section
+    function initorganizationExperience() {
+        const experienceContainer = $('#organizationexperience .timeline-container');
+        organizationexperienceData.forEach(item => {
+            experienceContainer.append(createTimelineItem(item, 'organizationexperience'));
+        });
+    }
+
     // Initialize both sections
-    initExperience();
+    initworkExperience();
+    initorganizationExperience();
     initEducation();
 
     // Enhanced scroll animation
