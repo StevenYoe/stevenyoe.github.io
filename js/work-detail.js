@@ -37,40 +37,45 @@ $(document).ready(function () {
 			title: 'Rese Corner Apps',
 			category: 'Mobile Application',
 			image: 'sources/img/work/3.png',
-			description:
+			description: [
 				'A Flutter-based Android application for a rese corner business, offering a user-friendly platform for browsing and ordering various snacks.',
+			]
 		},
 		{
 			id: 4,
 			title: 'SMEs Odoo ERP',
 			category: 'Innovation',
 			image: 'sources/img/work/4.png',
-			description:
+			description: [
 				'An integrated Odoo ERP system implementation for Rendy Audio Shop, featuring customized modules for inventory, purchasing, and website management to streamline business operations.',
+			]
 		},
 		{
 			id: 5,
 			title: 'Catering Timeh Website',
 			category: 'Website',
 			image: 'sources/img/work/5.png',
-			description:
+			description: [
 				'A PHP-based furniture e-commerce platform for food catering, designed to enhance brand awareness and facilitate seamless transactions.',
+			]
 		},
 		{
 			id: 6,
 			title: 'Catering Timeh Dashboard',
 			category: 'Website',
 			image: 'sources/img/work/6.png',
-			description:
+			description: [
 				"A comprehensive PHP admin dashboard for managing Catering Timeh's e-commerce platform, enabling complete control over content, products, and transactions.",
+			]
 		},
 		{
 			id: 7,
 			title: 'Manufacturing Warehouse',
 			category: 'Warehouse',
 			image: 'sources/img/work/7.png',
-			description:
+			description: [
 				'A detailed warehouse optimization project focusing on layout design, location strategy, and efficient product flow management for a manufacturing goods facility.',
+			]
 		},
 	];
 
