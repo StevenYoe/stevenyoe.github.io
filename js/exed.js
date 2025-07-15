@@ -30,7 +30,7 @@ $(document).ready(function() {
             description: [
                 "Entered the polytechnic with a scholarship",
                 "E-Commerce Logistics Major",
-                "Current GPA: 3.91 out of 4.0",
+                "Current GPA: 3.87 out of 4.0",
             ]
         }
     ];
